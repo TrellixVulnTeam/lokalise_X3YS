@@ -14,7 +14,8 @@ module.exports = {
     entry: "./js/main.js",
     output: {
         filename: `./js/${filename("js")}`,
-        path: path.resolve(__dirname, "app")
+        path: path.resolve(__dirname, "app"),
+        //assetModuleFilename: "img/[hash][ext][query]"
     },
     devServer: {
         historyApiFallback: true,
@@ -54,6 +55,13 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+            },
+            {
+                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]',
+                },
             }
         ]
     }
