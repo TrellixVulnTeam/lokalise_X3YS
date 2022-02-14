@@ -1,6 +1,6 @@
 const path = require("path")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
-const {CleanWebpackPlugin} = require("clean-webpack-plugin")
+//const {CleanWebpackPlugin} = require("clean-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 const isDev =  process.env.NODE_ENV === "development"
@@ -32,7 +32,7 @@ module.exports = {
                 collapseWhitespace: isProd
             }
         }),
-        new CleanWebpackPlugin(),
+       // new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: `./css/${filename("css")}`
         })
@@ -48,7 +48,7 @@ module.exports = {
                            hmr: isDev
                         },
                     },
-                    "css-loader"
+                    "css-loader",'less-loader'
                 ],
 
             },
@@ -57,12 +57,12 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
             },
             {
-                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+                test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
                 loader: 'file-loader',
                 options: {
                     name: '[path][name].[ext]',
                 },
-            }
+            },
         ]
     }
 }

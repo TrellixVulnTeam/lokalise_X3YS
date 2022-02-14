@@ -1,0 +1,81 @@
+.intro__wrapper{
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0 75px 0 75px;
+  height: 100%;
+  margin-bottom: 137px;
+
+  button{
+    width: 160px;
+    height: 60px;
+    background: #FFFFFF;
+
+    font-family: Graphik LC TT;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 60px;
+
+    box-shadow: none;
+    padding: 0;
+    text-align: center;
+  }
+  button:first-child {
+    background: #FF6336;
+    color: #FFFFFF;
+    border: none;
+  }
+}
+
+.intro__title{
+  margin-bottom: 51px;
+
+  font-weight: 600;
+  font-size: 65px;
+  line-height: 70px;
+
+  color: #000000;
+}
+
+.intro__subtitle{
+  margin-right: 68px;
+  margin-bottom: 50px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 35px;
+  color: #000000;
+}
+
+.intro__pic{
+  width: 53%;
+  height: 529px;
+}
+
+.intro__buttons{
+  display: flex;
+  column-gap: 10px;
+  margin-bottom: 25px;
+}
+
+.intro__caption{
+
+  font-size: 15px;
+  line-height: 25px;
+
+}
+
+@media screen and (max-width: 1040px) {
+  .intro__wrapper{
+    flex-direction: column;
+  }
+  .intro__pic{
+    width: 100%;
+  }
+  .intro__buttons{
+    justify-content: flex-start;
+  }
+}

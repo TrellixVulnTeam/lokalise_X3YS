@@ -1,2 +1,5 @@
 import "../scss/main.scss"
-import "../img/1.jpg"
+import "../scss/header-styles.scss"
+import "../scss/intro-block.scss"
+import "../img/HeaderPictures/logo.svg"
+import "../img/IntroPictures/intro-picture.svg"
