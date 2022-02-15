@@ -15,7 +15,7 @@ module.exports = {
     output: {
         filename: `./js/${filename("js")}`,
         path: path.resolve(__dirname, "app"),
-        //assetModuleFilename: "img/[hash][ext][query]"
+        clean: true
     },
     devServer: {
         historyApiFallback: true,
@@ -58,7 +58,16 @@ module.exports = {
             },
             {
                 test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
+                dependency: { not: ['url'] },
                 loader: 'file-loader',
+                options: {
+                    name: '[path][name].[ext]',
+                },
+            },
+            {
+                test: /\.(?:|woff2|ttf)$/i,
+                loader: 'file-loader',
+                dependency: { not: ['url'] },
                 options: {
                     name: '[path][name].[ext]',
                 },
