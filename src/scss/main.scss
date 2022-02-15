@@ -45,13 +45,17 @@ table {
   border-spacing: 0;
 }
 
-/*Wrapper and fonts styles*/
-$font-stack: Graphik LC TT;
+/*Wrappers and fonts styles*/
+$font-stack: "Graphik", sans-serif ;
 $primary-color: #000000;
 
 body{
   font: 100% $font-stack;
   color: $primary-color;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .wrapper{
@@ -59,10 +63,10 @@ body{
   width: 100%;
 
   margin: 0 auto;
-  font-family: "Graphik", serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 20px;
 }
 
+.container{
+  max-width: 1330px;
+  width: 100%;
+  margin: 0 auto;
+}

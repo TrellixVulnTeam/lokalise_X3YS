@@ -6,8 +6,11 @@
   padding: 31px 51px 24px 51px;
 
   border-bottom: 1px solid #CCCCCC;
-  margin-bottom: 97px;
+  margin-bottom: 129px;
 
+  img{
+    margin-right: 52px;
+  }
   button{
     width: 120px;
     height: 45px;
@@ -32,10 +35,6 @@
     line-height: 45px;
     color: #FFFFFF;
   }
-}
-
-.header__logo{
-    margin-right: 52px;
 }
 
 .header__content{

@@ -1,0 +1,46 @@
+%equal-heights {
+  display: flex;
+  align-items: center;
+}
+
+.tool__wrapper{
+  @extend %equal-heights;
+  flex-direction: column;
+
+  width: auto;
+  background: #FF9C7D;
+  padding: 10px 0 10px 0;
+
+  margin-bottom: 90px;
+
+  h1{
+    margin-top: 98px;
+    margin-bottom: 70px;
+
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+    font-style: normal;
+    max-width: 715px;
+    width: 80%;
+  }
+  nav{
+    margin: 0 0 94px 0;
+    width: 100%;
+  }
+  ul{
+    @extend %equal-heights;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 75px;
+
+    @media screen and (max-width: 1115px){
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+  }
+  li{
+    margin: 0 20px 20px 20px;
+  }
+}
