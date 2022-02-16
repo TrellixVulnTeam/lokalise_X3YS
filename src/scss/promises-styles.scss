@@ -1,0 +1,30 @@
+.promises{
+  display: flex;
+  background: #C9E8F2;
+
+}
+
+.promises__wrapper{
+  padding: 63px 0 0 75px ;
+  margin-right: 85px;
+  p{
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+    margin-bottom: 23px;
+
+  }
+}
+
+.promises_pic{
+  margin-top: 53px;
+  margin-right: 75px;
+  margin-bottom: 105px;
+}
+
+@media screen and (max-width: 1000px){
+  .promises {
+    flex-direction: column;
+    align-items: center;
+  }
+}

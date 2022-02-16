@@ -5,6 +5,12 @@ import "../scss/tool-styles.scss"
 import "../scss/info-blocks-styles.scss"
 import "../scss/lokalise-styles.scss"
 import "../scss/fonts.scss"
+import "../scss/promises-styles.scss"
+import "../scss/management-styles.scss"
+import "../scss/integrate-styles.scss"
+import "../scss/invite-styles.scss"
+import "../scss/studies-stuels.scss"
+import "../scss/footer-styles.scss"
 
 import "../img/HeaderPictures/logo.svg"
 
@@ -28,3 +34,20 @@ import "../img/LokaliseStaff/ioT.svg"
 import "../img/LokaliseStaff/marketing-e-mail.svg"
 import "../img/LokaliseStaff/mobile-apps.svg"
 import "../img/LokaliseStaff/web-apps.svg"
+import "../img/LokaliseStaff/managers.svg"
+import "../img/LokaliseStaff/translators.svg"
+import "../img/LokaliseStaff/developers.svg"
+
+import "../img/PromisesPicture/promises-pic.png"
+import "../img/PromisesPicture/promises-logo.svg"
+
+import "../img/ManagementPictures/manegement-logo-1.svg"
+import "../img/ManagementPictures/manegement-logo-2.svg"
+import "../img/ManagementPictures/manegement-pic.svg"
+import "../img/ManagementPictures/manegement-stars.svg"
+
+import "../img/qqqq.svg"
+import "../img/footer-logo.svg"
+
+import "../img/StudiesPictures/studies-logo.svg"
+import "../img/StudiesPictures/studies-pic.png"

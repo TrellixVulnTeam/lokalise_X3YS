@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d546432f-0649-4a30-b62b-0f613e1a2eab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/scss/footer-styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/integrate-styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/invite-styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/management-styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/promises-styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/studies-stuels.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/header-styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/header-styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/lokalise-styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/lokalise-styles.scss" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProjectId" id="256i7TZQBxIXdID7jAzUn5UKINP" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d546432f-0649-4a30-b62b-0f613e1a2eab" name="Default Changelist" comment="" />
+      <created>1644853770551</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644853770551</updated>
+      <workItem from="1644853775773" duration="146000" />
+      <workItem from="1644912489785" duration="47076000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

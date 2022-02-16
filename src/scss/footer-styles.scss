@@ -1,0 +1,25 @@
+.footer__wrapper{
+  display: flex;
+  justify-content: space-between;
+
+  padding: 47px 75px 48px 75px;
+
+  background: #EEEEEE;
+}
+
+.footer__capture{
+  display: flex;
+  div{
+    width: 385px;
+
+    font-size: 12px;
+    line-height: 15px;
+
+    margin-left: 15px;
+  }
+}
+
+.footer__date{
+  font-size: 12px;
+  line-height: 15px;
+}
