@@ -1,0 +1,57 @@
+.lokalise{
+  background: #FFF8E4;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  h1{
+    padding-top: 120px;
+    margin-bottom: 58px;
+
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 60px;
+
+    text-align: center;
+  }
+}
+
+.lokalise__wrapper{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  column-gap: 110px;
+  row-gap: 55px;
+
+  padding: 0 75px;
+
+  img{
+    margin-top: 21px;
+    margin-bottom: 26px;
+  }
+
+  h2{
+    margin-bottom: 20px;
+
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 35px;
+
+    text-align: center;
+  }
+
+  li{
+    width: 330px;
+    flex: 0 0 330px;
+    text-align: center;
+  }
+  p{
+    font-size: 18px;
+    line-height: 25px;
+
+    text-align: center;
+  }
+  @media screen and (max-width: 1380px){
+    justify-content: center;
+  }
+}

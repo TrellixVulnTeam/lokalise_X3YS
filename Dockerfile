@@ -15,4 +15,4 @@ COPY --from=build-stage /app/app/ /usr/share/nginx/html
 
 
 
-EXPOSE 80
+EXPOSE 8080

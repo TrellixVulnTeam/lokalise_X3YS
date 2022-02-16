@@ -5,6 +5,7 @@
 
   img{
     max-width: 632px;
+    width: 100%;
   }
 
   h1{
@@ -27,6 +28,22 @@
   a{
     color: #000000;
   }
+
+  pre{
+    height: 300px;
+    overflow: auto;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    border-radius: 4px;
+    padding: 30px;
+    background: #fff;
+  }
+
+  code{
+    height: 240px;
+    display: -webkit-box;
+    color: #9876aa;
+  }
+
   .info_ref{
     font-weight: 600;
     font-size: 20px;
@@ -42,12 +59,56 @@
   column-gap: 138px;
 }
 
+.info__code-sample{
+  width: 632px;
+  height: 632px;
+  background: #FFF8E4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.info__code-container{
+  width: 80%;
+  height: 340px;
+  max-width: 500px;
+}
+
 @media screen and (max-width: 1000px){
   .info__wrapper:nth-child(1n){
     align-items: center;
     flex-direction: column-reverse;
-    img{
-      width: 100%;
-    }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
