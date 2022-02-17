@@ -1,3 +1,5 @@
+@import "mixins";
+
 .footer__wrapper{
   padding: 0 75px 48px 75px;
   background: #EEEEEE;
@@ -5,20 +7,18 @@
 
 .footer__capture{
   display: flex;
-  div{
-    max-width: 385px;
-    width: 100%;
+}
 
-    font-size: 12px;
-    line-height: 15px;
+.footer__title{
+  max-width: 385px;
+  width: 100%;
+  @include fontz(12px, 15px);
 
-    margin-left: 15px;
-  }
+  margin-left: 15px;
 }
 
 .footer__date{
-  font-size: 12px;
-  line-height: 15px;
+  @include fontz(12px, 15px);
 }
 
 .footer__line{
@@ -29,8 +29,8 @@
   border-top: 1px solid black;
   width: 100%;
   padding-top: 40px;
+}
 
- img{
-   width: 90px;
- }
+.footer__pic{
+  width: 90px;
 }

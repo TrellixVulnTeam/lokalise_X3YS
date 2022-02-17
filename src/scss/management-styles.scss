@@ -1,3 +1,5 @@
+@import "mixins";
+
 .management__wrapper{
   display: flex;
   flex-direction: row;
@@ -8,29 +10,26 @@
   padding: 70px 75px 58px 74px;
 }
 
-.management__title{
+.management__container{
   display: flex;
   align-items: center;
   margin-bottom: 50px;
   column-gap: 67px;
-  h1{
-    font-weight: 600;
-    font-size: 35px;
-    line-height: 50px;
-  }
+}
+
+.management__title{
+  font-weight: 600;
+  @include fontz(35px, 50px);
 }
 
 .management__subtitle{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include positionBlock();
 
   column-gap: 70px;
-
   padding: 30px 62px 22px 70px;
 
   border-left: 1px solid #000;
-  img{
+  .management__pic{
     margin-bottom: 15px;
   }
 }

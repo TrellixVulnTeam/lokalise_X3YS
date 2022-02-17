@@ -1,48 +1,48 @@
-.intro__wrapper{
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  height: 100%;
-  margin-bottom: 137px;
+@import "mixins";
 
-  button{
+.intro{
+  &__button{
+    @include btnReset();
     width: 160px;
     height: 60px;
-    background: #FFFFFF;
-
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
     line-height: 60px;
 
-
-    box-shadow: none;
-    padding: 0;
-    text-align: center;
-  }
-  button:first-child {
-    background: #FF6336;
     color: #FFFFFF;
-    border: none;
   }
 
-  h1{
+  &__button:last-child{
+    background: #FFFFFF;
+
+    border: 1px solid black;
+    color: black;
+  }
+
+  &__title{
     margin-bottom: 51px;
 
     font-weight: 600;
+
+    @include fontz(65px, 70px);
     font-size: 65px;
     line-height: 70px;
   }
-  p{
+
+  &__wrapper{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100%;
+    margin-bottom: 137px;
+  }
+
+  &__subtitle{
+    @include fontz(25px, 35px);
+
     margin-right: 68px;
     margin-bottom: 50px;
-
-    font-size: 25px;
-    line-height: 35px;
   }
 }
-
 
 .intro__pic{
   max-width: 759px;
@@ -51,14 +51,10 @@
 }
 
 .intro__buttons{
-  display: flex;
-  column-gap: 10px;
-  margin-bottom: 25px;
+  @include positionBtns(25px);
 }
 
-
-
-@media screen and (max-width: 1040px) {
+@include for1040Width {
   .intro__wrapper{
     flex-direction: column;
   }

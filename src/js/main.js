@@ -11,6 +11,7 @@ import "../scss/integrate-styles.scss"
 import "../scss/invite-styles.scss"
 import "../scss/studies-stuels.scss"
 import "../scss/footer-styles.scss"
+import "../scss/mixins.scss"
 
 import "../img/HeaderPictures/logo.svg"
 

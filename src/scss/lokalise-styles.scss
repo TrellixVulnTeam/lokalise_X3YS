@@ -1,10 +1,13 @@
+@import "mixins";
+
 .lokalise {
   display: flex;
   align-items: center;
   flex-direction: column;
 
   background: #FFF8E4;
-  h1 {
+
+  &__main-title {
     padding-top: 120px;
     margin-bottom: 58px;
 
@@ -13,6 +16,24 @@
     line-height: 60px;
 
     text-align: center;
+  }
+
+  &__second-child{
+    background: #FFFFFF;
+
+    div{
+      height: 260px;
+    }
+    .lokalise__item{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      font-size: 20px;
+      line-height: 30px;
+
+      text-align: left;
+    }
   }
 }
 
@@ -28,57 +49,43 @@
 
   margin-bottom: 150px;
 
-  img {
-    margin-top: 21px;
-    margin-bottom: 26px;
-  }
-
-  h2 {
-    margin-bottom: 20px;
-
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 35px;
-
-    text-align: center;
-  }
-
-  li {
-    width: 330px;
-    flex: 0 0 330px;
-    text-align: center;
-  }
-
-  p {
-    font-size: 18px;
-    line-height: 25px;
-    margin-bottom: 25px;
-  }
-
-  a {
-    color: #000000;
-  }
-
   @media screen and (max-width: 1380px) {
     justify-content: center;
   }
 }
 
-.lokalise__second-child{
-  background: #FFFFFF;
-
-  div{
-    height: 260px
-  }
-
-    li{
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-
-      font-size: 20px;
-      line-height: 30px;
-
-      text-align: left;
-    }
+.lokalise__pic {
+  margin-top: 21px;
+  margin-bottom: 26px;
 }
+
+.lokalise__title {
+  margin-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 35px;
+
+  text-align: center;
+}
+
+.lokalise__subtitle {
+  @include fontz(18px, 25px);
+  margin-bottom: 25px;
+}
+
+
+.lokalise__item {
+  width: 330px;
+  flex: 0 0 330px;
+  text-align: center;
+
+  .lokalise__ref{
+    font-weight: normal;
+    text-decoration: underline;
+  }
+}
+
+
+
+

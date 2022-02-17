@@ -1,40 +1,35 @@
+@import "mixins";
+
 .integrate__wrapper{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@include positionINBlocks();
   margin-bottom: 162px;
+}
 
-  h1{
-    font-weight: 600;
-    font-size: 65px;
-    line-height: 75px;
+.integrate__title{
+  font-weight: 600;
+  @include fontz(65px, 75px);
 
-    max-width: 791px;
-    width: 100%;
-    text-align: center;
-  }
-  p{
-    font-size: 25px;
-    line-height: 30px;
-    width: 539px;
+  max-width: 791px;
+  width: 100%;
+  text-align: center;
+}
 
-    text-align: center;
+.integrate__subtitle{
+  @include fontz(25px, 30px);
+  width: 539px;
+  text-align: center;
+  margin-bottom: 25px;
+}
 
-    margin-bottom: 25px;
-  }
-  img{
-    max-width: 1023px;
-    width: 100%;
-    margin-bottom: 32px;
-  }
-  button{
-    width: 193px;
-    color: #FFFFFF;
-    text-align: center;
-    background: #FF6336;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 60px;
-    border: none;
-  }
+.integrate_pic{
+  max-width: 1023px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.integrate__button{
+  width: 193px;
+  @include btnReset();
+  @include fontz(16px, 60px);
+  color: #FFFFFF;
 }

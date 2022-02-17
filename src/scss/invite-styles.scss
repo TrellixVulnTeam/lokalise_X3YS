@@ -1,41 +1,36 @@
+@import "mixins";
 
 .invite__wrapper{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  @include positionINBlocks();
   background: #FF9C7D;
+}
 
-  h1{
-    font-weight: 600;
-    font-size: 65px;
-    line-height: 75px;
+.invitee__title{
+  font-weight: 600;
+  @include fontz(65px, 75px);
 
-    max-width: 784px;
-    width: 100%;
+  max-width: 784px;
+  width: 100%;
 
-    margin-top: 119px;
-    text-align: center;
-  }
-  p{
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
+  margin-top: 119px;
+  text-align: center;
+}
 
-    margin-top: 29px;
-  }
+.invite__subtitle{
+  @include fontz(20px, 30px);
+  text-align: center;
 
-  button{
-    width: 160px;
-    height: 60px;
-    color: #FFFFFF;
-    background: black;
-    border: none;
+  margin-top: 29px;
+}
 
-    margin-top: 54px;
-    margin-bottom: 161px;
+.integrate__button{
+  width: 160px;
+  height: 60px;
+  color: #FFFFFF;
 
-    font-size: 17px;
-    line-height: 60px;
-  }
+  margin-top: 54px;
+  margin-bottom: 161px;
+  @include btnReset();
+  background: black;
+  @include fontz(17px, 60px);
 }

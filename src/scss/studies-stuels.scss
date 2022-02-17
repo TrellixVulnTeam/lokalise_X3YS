@@ -1,14 +1,14 @@
+@import "mixins";
+
 .studies__wrapper{
   display: flex;
   padding: 92px 75px 0 75px;
   column-gap: 140px;
   background: #EEEEEE;
 
-  h1{
+  .studies__title{
     font-weight: 600;
-    font-size: 40px;
-    line-height: 50px;
-
+    @include fontz(40px, 50px);
     margin-bottom: 28px;
   }
   h2{
@@ -17,28 +17,6 @@
     line-height: 25px;
 
     margin-bottom: 21px;
-  }
-
-  img{
-    width: 300px;
-    margin-bottom: 20px;
-  }
-  img:last-child{
-    width: 80px;
-  }
-
-  p{
-    font-size: 20px;
-    line-height: 30px;
-    margin-bottom: 15px;
-
-    max-width: 290px;
-    min-width: 100%;
-  }
-
-  a{
-    text-decoration: none;
-    color: #000000;
   }
 
   nav {
@@ -57,6 +35,23 @@
   display: flex;
   flex-direction: column;
 
+}
+
+.studies__pic{
+  width: 300px;
+  margin-bottom: 20px;
+}
+.studies__pic:last-child{
+  width: 80px;
+}
+
+.studies__subtitle{
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 15px;
+
+  max-width: 290px;
+  min-width: 100%;
 }
 
 .studies__refs{
