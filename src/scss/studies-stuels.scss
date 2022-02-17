@@ -74,3 +74,10 @@
     padding-top: 40px;
   }
 }
+
+
+@media screen and (max-width: 768px){
+  .studies__refs{
+    flex-wrap: wrap;
+  }
+}
