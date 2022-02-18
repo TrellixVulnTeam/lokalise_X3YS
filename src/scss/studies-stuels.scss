@@ -11,24 +11,14 @@
     @include fontz(40px, 50px);
     margin-bottom: 28px;
   }
-  h2{
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 25px;
-
-    margin-bottom: 21px;
-  }
-
-  nav {
-    li{
-      display: flex;
-      margin-bottom: 15px;
-    }
-  }
 }
 
 .studies__info{
   margin-bottom: 95px;
+  .studies__ref{
+    font-weight: 600;
+    @include fontz(20px, 30px);
+  }
 }
 
 .studies__pics{
@@ -46,8 +36,7 @@
 }
 
 .studies__subtitle{
-  font-size: 20px;
-  line-height: 30px;
+  @include fontz(20px, 30px);
   margin-bottom: 15px;
 
   max-width: 290px;
@@ -58,6 +47,18 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  .studies__title{
+      font-weight: 600;
+      @include fontz(20px, 25px);
+
+      margin-bottom: 21px;
+  }
+    .studies__ref{
+      li{
+        display: flex;
+        margin-bottom: 15px;
+      }
+    }
 }
 
 @media screen and (max-width: 1054px){
@@ -69,7 +70,6 @@
     padding-top: 40px;
   }
 }
-
 
 @media screen and (max-width: 768px){
   .studies__refs{

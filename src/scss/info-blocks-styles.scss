@@ -46,7 +46,6 @@
   .info__ref{
     font-weight: normal;
     text-decoration: underline;
-
   }
 }
 
@@ -68,12 +67,10 @@
 }
 
 .info__code-container{
-  width: 80%;
+  width: 100%;
   height: 340px;
   max-width: 500px;
 }
-
-
 
 @include for1040Width() {
   .info__wrapper:nth-child(1n){
@@ -81,6 +78,8 @@
     flex-direction: column-reverse;
   }
 }
+
+
 
 
 
