@@ -158,41 +158,117 @@
 
                     <div class="info__code-sample">
                         <div class="info__code-container">
-                            <pre>
-                                <code>
-                                    <div class="php" style="font-family:monospace;"><span style="color: #000088;">$client</span> <span
+                            <div class="info__slider">
+                                <div class="info__slider-line">
+                                    <div class="info__item"><pre><code><span
+                                            style="color: #000088;">$client</span> <span
                                             style="color: #339933;">=</span> <span
-                                            style="color: #000000; font-weight: bold;">new</span> \Lokalise\LokaliseApiClient<span
+                                            style="color: #000000;">new</span> \Lokalise\LokaliseApiClient<span
                                             style="color: #009900;">(</span><span
                                             style="color: #000088;">$token</span><span
-                                            style="color: #009900;">)</span><span style="color: #339933;">;</span>
+                                            style="color: #009900;">)</span><span
+                                            style="color: #339933;">;</span>&nbsp;
 
-                                        &nbsp;
+
 <span style="color: #000088;">$response</span> <span style="color: #339933;">=</span> <span style="color: #000088;">$client</span><span
                                                 style="color: #339933;">-&gt;</span><span
                                                 style="color: #004000;">files</span><span
-                                                style="color: #339933;">-&gt;</span><span style="color: #004000;">download</span><span
+                                                style="color: #339933;">-&gt;</span><span
+                                                style="color: #004000;">download</span><span
                                                 style="color: #009900;">(</span>
     <span style="color: #000088;">$projectId</span><span style="color: #339933;">,</span>
-    <span style="color: #009900;">[</span>
+    <span style="color: #009900;">[
+    </span>
         <span style="color: #0000ff;">'format'</span> <span style="color: #339933;">=&gt;</span> <span
                                                 style="color: #0000ff;">'json'</span><span
-                                                style="color: #339933;">,</span>
-    <span style="color: #009900;">]</span>
-<span style="color: #009900;">)</span><span style="color: #339933;">;</span></div>
-                                </code>
-                            </pre>
-                            <div class="info__code-footer">
-                                <a href="#">&#8592;</a>
-                                <span>php</span>
-                                <a href="#">&#8594;</a>
+                                                style="color: #339933;">,</span><span style="color: #009900;">
+
+    ]</span>
+
+<span style="color: #009900;">)</span><span style="color: #339933;">;</span></code></pre>
+                                    </div>
+                                    <div class="info__item"><pre><code><span style="color: #000066; ">const</span> lokalise <span
+                                            style="color: #339933;">=</span> <span
+                                            style="color: #000066; font-weight: bold;">new</span> LokaliseApi<span
+                                            style="color: #009900;">(</span><span style="color: #009900;">{</span>apiKey<span
+                                            style="color: #339933;">:</span> token<span style="color: #009900;">}</span><span
+                                            style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+
+lokalise.<span style="color: #660066;">files</span>.<span style="color: #660066;">download</span><span
+                                                style="color: #009900;">(</span>
+
+    project_id<span style="color: #339933;">,</span> <span style="color: #009900;">{
+                                        </span>
+        format<span style="color: #339933;">:</span> <span style="color: #3366CC;">"json"</span><span
+                                                style="color: #339933;">,
+                                        </span>
+        original_filenames<span style="color: #339933;">:</span> <span style="color: #003366;">true</span>
+    <span style="color: #009900;">}
+    </span>
+<span style="color: #009900;">)</span><span style="color: #339933;">;</span></code></pre>
+                                    </div>
+                                    <div class="info__item">
+                                        <pre><code>client<span style="color: #000066;">,</span> err <span
+                                                style="color: #000066;">:</span><span style="color: #000066;">=</span> lokalise<span
+                                                style="color: #000066;">.</span><span style="color: #000066;">New</span><span
+                                                style="color: #009900;">(</span>token<span
+                                                style="color: #009900;">)</span>
+&nbsp;
+client <span style="color: #000066;">:</span><span style="color: #000066;">=</span> Api<span
+                                                    style="color: #000066;">.</span><span style="color: #006600;">Contributors</span><span
+                                                    style="color: #009900;">(</span><span
+                                                    style="color: #009900;">)</span>
+client<span style="color: #000066;">.</span><span style="color: #006600;">SetPageOptions</span><span
+                                                    style="color: #009900;">(</span>pageOpts<span
+                                                    style="color: #009900;">)</span>
+client<span style="color: #000066;">.</span><span style="color: #006600;">List</span><span
+                                                    style="color: #009900;">(</span>projectId<span
+                                                    style="color: #009900;">)</span>
+
+                                        </code></pre>
+                                    </div>
+                                    <div class="info__item">
+                                        <pre><code><span style="color:#0066ff; font-weight:bold;">@client</span> = Lokalise.<span
+                                                style="color:#9900CC;">client</span> token
+&nbsp;
+
+translations = <span style="color:#0066ff; font-weight:bold;">@client</span>.<span
+                                                    style="color:#9900CC;">translations</span><span
+                                                    style="color:#006600; font-weight:bold;">(</span>
+  project_id,
+  limit: <span style="color:#006666;">4</span>,
+  page: <span style="color:#006666;">2</span>,
+  disable_references: <span style="color:#006666;">0</span>
+<span style="color:#006600; font-weight:bold;">)</span></code></pre>
+                                    </div>
+                                    <div class="info__item">
+                                        <pre><code>
+  curl
+  <span style="color: #660033;">--request</span> POST \
+  <span style="color: #660033;">--url</span> https:<span style="color: #000000; font-weight: bold;">//</span>api.lokalise.com<span
+                                                style="color: #000000; font-weight: bold;">/</span>api2<span
+                                                style="color: #000000; font-weight: bold;">/</span>projects<span
+                                                style="color: #000000; font-weight: bold;">/</span><span
+                                                style="color: #800000;">${PROJECT_ID}</span><span
+                                                style="color: #000000; font-weight: bold;">/</span>branches \
+  <span style="color: #660033;">--header</span> <span style="color: #ff0000;">'content-type: application/json'</span> \
+  <span style="color: #660033;">--header</span> <span style="color: #ff0000;">'x-api-token: ${TOKEN}'</span> \
+  <span style="color: #660033;">--data</span> <span style="color: #ff0000;">'{"name":"hotfix/really-important"}'</span>
+                                        </code></pre>
+                                    </div>
+                                </div>
                             </div>
+                            <button class="info__prev">&#8592;</button>
+                            <span class="info__language"></span>
+                            <button class="info__next">&#8594;</button>
                         </div>
                     </div>
-
                 </div>
+
             </div>
         </div>
+
 
         <div class="lokalise">
             <h1 class="lokalise__main-title">What can you localize with Lokalise?</h1>
@@ -344,7 +420,7 @@
             <div class="invite__wrapper">
                 <h1 class="invitee__title">Localization made easy. Why wait?</h1>
                 <p class="invite__subtitle">Try for free or let us show you how it works.</p>
-                <button class="integrate__button">Try it free</button>
+                <button class="invite__button">Try it free</button>
             </div>
         </div>
 
@@ -411,7 +487,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </main>
 
