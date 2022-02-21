@@ -47,7 +47,7 @@
     @include fontz(15px, 15px);
 
     &:hover{
-      background: #FF6336;
+      cursor: pointer;
     }
   }
 
@@ -83,6 +83,9 @@
       width: 100%;
       padding: 30px;
       font-size: 32px;
+      &:hover{
+        background: #FF6336;
+      }
     }
 
     &__item:last-child {
@@ -126,8 +129,8 @@
     content: '⮾';
     position: fixed;
     z-index: 2;
-    top: 20px;
-    right: 20px;
+    top: 35px;
+    right: 50px;
   }
 
   @keyframes show {

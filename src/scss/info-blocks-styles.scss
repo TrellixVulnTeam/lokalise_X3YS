@@ -105,14 +105,47 @@
     overflow: auto;
     height: 270px;
   }
+  .info__blue{
+    color: #000088
+  }
+
+  .info__green{
+    color: #339933;
+  }
+  .info__lightblue{
+    color: #0000ff;
+  }
+  .info__purple{
+    color: #660066;
+  }
+  .info__dark-green{
+    color: #006600;
+  }
+  .info__pale-purple{
+    color: #660033;
+  }
+  .info__pale-green{
+    color:#006666;
+  }
+  .info__pink{
+    color:#9900CC;
+  }
+  .info__orange{
+    color: #ff0000;
+  }
 }
 
 
 .info__prev,.info__next{
   @include btnReset();
   background: none;
-  cursor: pointer;
+  height: 0;
+  text-decoration: underline;
+  &:hover{
+    zoom: 1.1;
+  }
 }
+
 
 .info__language{
   display: inline-block;

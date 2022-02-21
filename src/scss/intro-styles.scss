@@ -57,6 +57,7 @@
 @include for1040Width {
   .intro__wrapper{
     flex-direction: column;
+    padding: 0 25px;
   }
   .intro__pic{
     width: 100%;
