@@ -2,6 +2,7 @@ const path = require("path")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
 //const {CleanWebpackPlugin} = require("clean-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const webpack = require("webpack")
 
 const isDev =  process.env.NODE_ENV === "development"
 const isProd = !isDev
@@ -35,7 +36,12 @@ module.exports = {
        // new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: `./css/${filename("css")}`
-        })
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
+        }),
     ],
     module: {
         rules: [
@@ -45,7 +51,7 @@ module.exports = {
                     {
                        loader: MiniCssExtractPlugin.loader,
                         options: {
-                           hmr: isDev
+
                         },
                     },
                     "css-loader",'less-loader'
@@ -71,6 +77,25 @@ module.exports = {
                 options: {
                     name: '[path][name].[ext]',
                 },
+            },
+            {
+                test: /\.less$/i,
+                use: [
+                    {
+                        loader: "style-loader",
+                    },
+                    {
+                        loader: "css-loader",
+                    },
+                    {
+                        loader: "less-loader",
+                        options: {
+                            lessOptions: {
+                                strictMath: true,
+                            },
+                        },
+                    },
+                ],
             },
         ]
     }

@@ -13,6 +13,11 @@ import "../scss/studies-stuels.scss"
 import "../scss/footer-styles.scss"
 import "../scss/mixins.scss"
 
+import 'owl.carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+
+
+
 import "../img/HeaderPictures/logo.svg"
 
 import "../img/IntroPictures/intro-picture.svg"
@@ -52,3 +57,7 @@ import "../img/footer-logo.svg"
 
 import "../img/StudiesPictures/studies-logo.svg"
 import "../img/StudiesPictures/studies-pic.png"
+
+$(document).ready(function(){
+    $('.owl-carousel').owlCarousel();
+});
