@@ -58,6 +58,63 @@ import "../img/footer-logo.svg"
 import "../img/StudiesPictures/studies-logo.svg"
 import "../img/StudiesPictures/studies-pic.png"
 
-$(document).ready(function(){
-    $('.owl-carousel').owlCarousel();
-});
+    let offset = 0
+    const sliderLine = document.querySelector(".info__slider-line")
+
+    const demoId = document.querySelector('.info__language')
+
+    demoId.textContent = "php"
+
+    document.querySelector(".info__next").addEventListener("click", () => {
+        offset += 496
+        if (offset > 1984) {
+            offset = 0
+        }
+        sliderLine.style.left = -offset + "px"
+
+        switch (offset) {
+            case 0:
+                demoId.textContent = "php"
+                break
+            case 496:
+                demoId.textContent = "node.js"
+                break
+            case 992:
+                demoId.textContent = "go"
+                break
+            case 1488:
+                demoId.textContent = "ruby"
+                break
+            case 1984:
+                demoId.textContent = "curl"
+                break
+        }
+    })
+    document.querySelector(".info__prev").addEventListener("click", () => {
+        offset -= 496
+        if (offset < 0) {
+            offset = 1984
+        }
+        sliderLine.style.left = -offset + "px"
+
+        switch (offset) {
+            case 0:
+                demoId.textContent = "php"
+                break
+            case 496:
+                demoId.textContent = "node.js"
+                break
+            case 992:
+                demoId.textContent = "go"
+                break
+            case 1488:
+                demoId.textContent = "ruby"
+                break
+            case 1984:
+                demoId.textContent = "curl"
+                break
+        }
+    })
+
+
+

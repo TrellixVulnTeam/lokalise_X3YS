@@ -1,91 +1,103 @@
 @import "mixins";
 
-.header__wrapper {
-  @include positionBlock();
+.header {
+  &__wrapper {
+    @include positionBlock();
 
-  padding: 31px 51px 24px 51px;
+    padding: 31px 51px 24px 51px;
 
-  border-bottom: 1px solid #CCCCCC;
-  margin-bottom: 129px;
+    border-bottom: 1px solid #CCCCCC;
+    margin-bottom: 129px;
+  }
 
-  .header__logo {
+  &__logo {
     margin-right: 52px;
   }
 
-  .header__button {
+  &__button {
     @include btnReset();
     width: 120px;
     height: 45px;
   }
 
-  .header__button:first-child {
+  &__button:first-child {
     border: 1px solid rgba(0, 0, 0, 0.5);
     background: #FFFFFF;
   }
 
-  .header__button:last-child {
+  &__button:last-child {
     color: #FFFFFF;
   }
 
+  &__content {
+    @include positionBlock();
+    width: 100%;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 52px;
+
+    @include fontz(15px, 15px);
+
+    &:hover{
+      background: #FF6336;
+    }
+  }
+
+
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__buttons {
+    @include positionBtns(0);
+  }
+
   @media screen and (max-width: 1040px) {
-    .header__nav {
-      .header__list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
+    &__buttons {
+      justify-content: center;
+      margin-top: 20px;
+    }
 
-      .header__item {
-        display: block;
-        margin-right: 0;
-        border-bottom: 1px solid #CCCCCC;
-        width: 100%;
-        padding: 30px;
-        font-size: 32px;
-      }
+    &__content {
+      display: none;
+    }
+    &__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
 
-      .header__item:last-child {
-        margin-right: 0;
-      }
+    &__item {
+      display: block;
+      margin-right: 0;
+      border-bottom: 1px solid #CCCCCC;
+      width: 100%;
+      padding: 30px;
+      font-size: 32px;
+    }
+
+    &__item:last-child {
+      margin-right: 0;
     }
   }
 }
 
-.header__content {
-  @include positionBlock();
-  width: 100%;
-}
-
-.header__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.header__item {
-  display: inline-block;
-  margin-right: 52px;
-
-  font-size: 15px;
-  line-height: 15px;
-}
-
-.header__item:last-child {
-  margin-right: 0;
-}
-
-.header__buttons {
-  @include positionBtns(0);
-}
 
 #burger, [for=burger] {
   display: none;
 }
 
 @include for1040Width {
-  .header__content {
-    display: none;
-  }
+
   [for=burger] {
     display: block;
     font-size: 30px;
@@ -102,7 +114,7 @@
     top: 0;
     left: 0;
     z-index: 1;
-    animation: show 1s ease;
+    animation: show .5s ease;
   }
 
   #burger:checked + .header__content {
@@ -116,11 +128,6 @@
     z-index: 2;
     top: 20px;
     right: 20px;
-  }
-
-  .header__buttons {
-    justify-content: center;
-    margin-top: 20px;
   }
 
   @keyframes show {

@@ -5,12 +5,14 @@
     <title>Title</title>
 </head>
 <body>
+
+
 <header class="header">
     <div class="wrapper">
         <div class="header__wrapper">
-            <div class="header__logo">
+            <div >
                 <a href="/" class="header__logo-link">
-                    <img class="header__logo" src="img/HeaderPictures/logo.svg" alt="">
+                    <img class="header__logo" src="img/HeaderPictures/logo.svg" alt="logo-icon">
                 </a>
             </div>
             <input type="checkbox" id="burger">
@@ -65,7 +67,7 @@
                         </div>
                         <h3 class="intro__caption">Try all features for 14 days · No credit card required</h3>
                     </div>
-                    <img class="intro__pic" src="img/IntroPictures/intro-picture.svg" alt="">
+                    <img class="intro__pic" src="img/IntroPictures/intro-picture.svg" alt="intro-picture-icon">
                 </div>
             </div>
         </div>
@@ -111,7 +113,7 @@
                             what and when.</p>
                         <a class="info__ref" href="">Start now</a>
                     </div>
-                    <img class="info__pic" src="img/InfoGifs/info_gif_1.gif" alt="">
+                    <img class="info__pic" src="img/InfoGifs/info_gif_1.gif" alt="info-gif">
                 </div>
                 <div class="info__wrapper">
                     <div>
@@ -124,7 +126,7 @@
                             as soon as the product design is ready. No more idle waiting.</p>
                         <a class="info__ref" href="">Start now</a>
                     </div>
-                    <img class="info__pic" src="img/InfoGifs/info-gif_2.gif" alt="">
+                    <img class="info__pic" src="img/InfoGifs/info-gif_2.gif" alt="info-gif">
                 </div>
                 <div class="info__wrapper">
                     <div>
@@ -139,7 +141,7 @@
                         </p>
                         <a class="info__ref" href="">Start now</a>
                     </div>
-                    <img class="info__pic" src="img/InfoGifs/info_gif_3.gif" alt="">
+                    <img class="info__pic" src="img/InfoGifs/info_gif_3.gif" alt="info-gif">
                 </div>
                 <div class="info__wrapper">
                     <div>
@@ -158,46 +160,124 @@
 
                     <div class="info__code-sample">
                         <div class="info__code-container">
+                            <div class="info__slider">
+                                <div class="info__slider-line">
+                                    <div class="info__item"><pre><code><span
+                                            style="color: #000088;">$client</span> <span
+                                            style="color: #339933;">=</span> <span
+                                            style="color: #000000;">new</span> \Lokalise\LokaliseApiClient<span
+                                            style="color: #009900;">(</span><span
+                                            style="color: #000088;">$token</span><span
+                                            style="color: #009900;">)</span><span
+                                            style="color: #339933;">;</span>&nbsp;
 
 
-                            <div class="owl-carousel owl-theme">
-                                <div>
-                                <pre>
-                                    <code>
-                                        1
-                                    </code>
-                                </pre>
-                                </div>
-                                <div>
-                                    <pre>
-                                        <code>
-                                        1
-                                        </code>
-                                    </pre>
-                                </div>
-                                <div>
-                                    <pre>
-                                        <code>
-                                        1
-                                        </code>
-                                    </pre>
+<span style="color: #000088;">$response</span> <span style="color: #339933;">=</span> <span style="color: #000088;">$client</span><span
+                                                style="color: #339933;">-&gt;</span><span
+                                                style="color: #004000;">files</span><span
+                                                style="color: #339933;">-&gt;</span><span
+                                                style="color: #004000;">download</span><span
+                                                style="color: #009900;">(</span>
+    <span style="color: #000088;">$projectId</span><span style="color: #339933;">,</span>
+    <span style="color: #009900;">[
+    </span>
+        <span style="color: #0000ff;">'format'</span> <span style="color: #339933;">=&gt;</span> <span
+                                                style="color: #0000ff;">'json'</span><span
+                                                style="color: #339933;">,</span><span style="color: #009900;">
+
+    ]</span>
+
+<span style="color: #009900;">)</span><span style="color: #339933;">;</span></code></pre>
+                                    </div>
+                                    <div class="info__item"><pre><code><span style="color: #000066; ">const</span> lokalise <span
+                                            style="color: #339933;">=</span> <span
+                                            style="color: #000066; font-weight: bold;">new</span> LokaliseApi<span
+                                            style="color: #009900;">(</span><span style="color: #009900;">{</span>apiKey<span
+                                            style="color: #339933;">:</span> token<span style="color: #009900;">}</span><span
+                                            style="color: #009900;">)</span><span style="color: #339933;">;</span>
+&nbsp;
+
+lokalise.<span style="color: #660066;">files</span>.<span style="color: #660066;">download</span><span
+                                                style="color: #009900;">(</span>
+
+    project_id<span style="color: #339933;">,</span> <span style="color: #009900;">{
+                                        </span>
+        format<span style="color: #339933;">:</span> <span style="color: #3366CC;">"json"</span><span
+                                                style="color: #339933;">,
+                                        </span>
+        original_filenames<span style="color: #339933;">:</span> <span style="color: #003366;">true</span>
+    <span style="color: #009900;">}
+    </span>
+<span style="color: #009900;">)</span><span style="color: #339933;">;</span></code></pre>
+                                    </div>
+                                    <div class="info__item">
+                                        <pre><code>client<span style="color: #000066;">,</span> err <span
+                                                style="color: #000066;">:</span><span style="color: #000066;">=</span> lokalise<span
+                                                style="color: #000066;">.</span><span style="color: #000066;">New</span><span
+                                                style="color: #009900;">(</span>token<span
+                                                style="color: #009900;">)</span>
+&nbsp;
+client <span style="color: #000066;">:</span><span style="color: #000066;">=</span> Api<span
+                                                    style="color: #000066;">.</span><span style="color: #006600;">Contributors</span><span
+                                                    style="color: #009900;">(</span><span
+                                                    style="color: #009900;">)</span>
+client<span style="color: #000066;">.</span><span style="color: #006600;">SetPageOptions</span><span
+                                                    style="color: #009900;">(</span>pageOpts<span
+                                                    style="color: #009900;">)</span>
+client<span style="color: #000066;">.</span><span style="color: #006600;">List</span><span
+                                                    style="color: #009900;">(</span>projectId<span
+                                                    style="color: #009900;">)</span>
+
+                                        </code></pre>
+                                    </div>
+                                    <div class="info__item">
+                                        <pre><code><span style="color:#0066ff; font-weight:bold;">@client</span> = Lokalise.<span
+                                                style="color:#9900CC;">client</span> token
+&nbsp;
+
+translations = <span style="color:#0066ff; font-weight:bold;">@client</span>.<span
+                                                    style="color:#9900CC;">translations</span><span
+                                                    style="color:#006600; font-weight:bold;">(</span>
+  project_id,
+  limit: <span style="color:#006666;">4</span>,
+  page: <span style="color:#006666;">2</span>,
+  disable_references: <span style="color:#006666;">0</span>
+<span style="color:#006600; font-weight:bold;">)</span></code></pre>
+                                    </div>
+                                    <div class="info__item">
+                                        <pre><code>
+  curl
+  <span style="color: #660033;">--request</span> POST \
+  <span style="color: #660033;">--url</span> https:<span style="color: #000000; font-weight: bold;">//</span>api.lokalise.com<span
+                                                style="color: #000000; font-weight: bold;">/</span>api2<span
+                                                style="color: #000000; font-weight: bold;">/</span>projects<span
+                                                style="color: #000000; font-weight: bold;">/</span><span
+                                                style="color: #800000;">${PROJECT_ID}</span><span
+                                                style="color: #000000; font-weight: bold;">/</span>branches \
+  <span style="color: #660033;">--header</span> <span style="color: #ff0000;">'content-type: application/json'</span> \
+  <span style="color: #660033;">--header</span> <span style="color: #ff0000;">'x-api-token: ${TOKEN}'</span> \
+  <span style="color: #660033;">--data</span> <span style="color: #ff0000;">'{"name":"hotfix/really-important"}'</span>
+                                        </code></pre>
+                                    </div>
                                 </div>
                             </div>
-
-
+                            <button class="info__prev">&#8592;</button>
+                            <span class="info__language"></span>
+                            <button class="info__next">&#8594;</button>
                         </div>
                     </div>
-
                 </div>
+
             </div>
         </div>
+
 
         <div class="lokalise">
             <h1 class="lokalise__main-title">What can you localize with Lokalise?</h1>
             <ul class="lokalise__wrapper">
                 <li class="lokalise__item">
                     <div>
-                        <img class="lokalise__pic" src="img/LokaliseStaff/web-apps.svg" alt="">
+                        <img class="lokalise__pic" src="img/LokaliseStaff/web-apps.svg" alt="web-app-icon">
                     </div>
                     <h2 class="lokalise__title">Web apps</h2>
                     <p class="lokalise__subtitle">Any kind of web apps — backend, frontend, single page, blogs — you
@@ -205,7 +285,7 @@
                 </li>
                 <li class="lokalise__item">
                     <div>
-                        <img class="lokalise__pic" src="img/LokaliseStaff/mobile-apps.svg" alt="">
+                        <img class="lokalise__pic" src="img/LokaliseStaff/mobile-apps.svg" alt="mobile-app-icon">
                     </div>
                     <h2 class="lokalise__title">Mobile apps</h2>
                     <p class="lokalise__subtitle">Upload any mobile platform language files. Embed <a class="info__ref"
@@ -217,7 +297,7 @@
                 </li>
                 <li class="lokalise__item">
                     <div>
-                        <img class="lokalise__pic" src="img/LokaliseStaff/games.svg" alt="">
+                        <img class="lokalise__pic" src="img/LokaliseStaff/games.svg" alt="games-icon">
                     </div>
                     <h2 class="lokalise__title">Games</h2>
                     <p class="lokalise__subtitle">Our cloud software is trusted by many leading game developers around
@@ -225,14 +305,14 @@
                 </li>
                 <li class="lokalise__item">
                     <div>
-                        <img class="lokalise__pic" src="img/LokaliseStaff/documents.svg" alt="">
+                        <img class="lokalise__pic" src="img/LokaliseStaff/documents.svg" alt="documents-icon">
                     </div>
                     <h2 class="lokalise__title">Documents</h2>
                     <p class="lokalise__subtitle">Upload your DOCX and static HTML files.</p>
                 </li>
                 <li class="lokalise__item">
                     <div>
-                        <img class="lokalise__pic" src="img/LokaliseStaff/marketing-e-mail.svg" alt="">
+                        <img class="lokalise__pic" src="img/LokaliseStaff/marketing-e-mail.svg" alt="marketing-e-mail-icon">
                     </div>
                     <h2 class="lokalise__title">Marketing e-mails</h2>
                     <p class="lokalise__subtitle">Integrate with Salesforce Marketing Cloud (coming soon) or translate
@@ -240,7 +320,7 @@
                 </li>
                 <li class="lokalise__item">
                     <div>
-                        <img class="lokalise__pic" src="img/LokaliseStaff/ioT.svg" alt="">
+                        <img class="lokalise__pic" src="img/LokaliseStaff/ioT.svg" alt="ioT-icon">
                     </div>
                     <h2 class="lokalise__title">IoT</h2>
                     <p class="lokalise__subtitle">We support most popular localization file formats.</p>
@@ -253,7 +333,7 @@
             <ul class="lokalise__wrapper">
                 <li class="lokalise__item">
                     <div>
-                        <img class="lokalise__pic" src="img/LokaliseStaff/managers.svg" alt="">
+                        <img class="lokalise__pic" src="img/LokaliseStaff/managers.svg" alt="managers-icon">
                     </div>
                     <h2 class="lokalise__title">Managers</h2>
                     <p class="lokalise__subtitle">Update existing and launch new features and products while
@@ -264,7 +344,7 @@
                 </li>
                 <li class="lokalise__item">
                     <div>
-                        <img class="lokalise__pic" src="img/LokaliseStaff/developers.svg" alt="">
+                        <img class="lokalise__pic" src="img/LokaliseStaff/developers.svg" alt="developers-icon">
                     </div>
                     <h2 class="lokalise__title">Developers</h2>
                     <p class="lokalise__subtitle">Set up an integration with your code repository or your own custom SDK
@@ -277,7 +357,7 @@
                 </li>
                 <li class="lokalise__item">
                     <div>
-                        <img class="lokalise__pic" src="img/LokaliseStaff/translators.svg" alt="">
+                        <img class="lokalise__pic" src="img/LokaliseStaff/translators.svg" alt="translators-icon">
                     </div>
                     <h2 class="lokalise__title">Translators</h2>
                     <p class="lokalise__subtitle">Eliminate double-work and neverending revisions with visual context
@@ -298,30 +378,30 @@
                 <div>
                     <cite>Edward Cooper, Chief Mobile Officer</cite>
                     <div>
-                        <img src="img/PromisesPicture/promises-logo.svg" alt="">
+                        <img src="img/PromisesPicture/promises-logo.svg" alt="promises-logo">
                     </div>
                 </div>
             </div>
             <div class="promises_pic">
-                <img src="img/PromisesPicture/promises-pic.png" alt="">
+                <img src="img/PromisesPicture/promises-pic.png" alt="promises-pic">
             </div>
         </div>
 
         <div class="management">
             <div class="management__wrapper">
                 <div class="management__container">
-                    <img src="img/ManagementPictures/manegement-pic.svg" alt="">
+                    <img src="img/ManagementPictures/manegement-pic.svg" alt="manegement-pic">
                     <h1 class="management__title">The most-loved translation management software</h1>
                 </div>
                 <div class="management__subtitle">
                     <div class="management__awards">
-                        <img class="management__pic" src="img/ManagementPictures/manegement-logo-1.svg" alt="">
-                        <img class="management__pic" src="img/ManagementPictures/manegement-stars.svg" alt="">
+                        <img class="management__pic" src="img/ManagementPictures/manegement-logo-1.svg" alt="manegement-logo-icon">
+                        <img class="management__pic" src="img/ManagementPictures/manegement-stars.svg" alt="manegement-stars-icon">
                         <div>USERS LOVE US</div>
                     </div>
                     <div class="management__awards">
-                        <img class="management__pic" src="img/ManagementPictures/manegement-logo-2.svg" alt="">
-                        <img class="management__pic" src="img/ManagementPictures/manegement-stars.svg" alt="">
+                        <img class="management__pic" src="img/ManagementPictures/manegement-logo-2.svg" alt="manegement-icon">
+                        <img class="management__pic" src="img/ManagementPictures/manegement-stars.svg" alt="manegement-icon">
                         <div>HIGHEST RATED</div>
                     </div>
                 </div>
@@ -333,7 +413,7 @@
                 <h1 class="integrate__title">Integrate Lokalise with your work tools</h1>
                 <p class="integrate__subtitle">Automate processes, eliminate routine tasks, and track progress with
                     ease.</p>
-                <img class="integrate_pic" src="img/qqqq.svg" alt="">
+                <img class="integrate_pic" src="img/qqqq.svg" alt="integrate_pic">
                 <button class="integrate__button">See all integrations</button>
             </div>
         </div>
@@ -342,7 +422,7 @@
             <div class="invite__wrapper">
                 <h1 class="invitee__title">Localization made easy. Why wait?</h1>
                 <p class="invite__subtitle">Try for free or let us show you how it works.</p>
-                <button class="integrate__button">Try it free</button>
+                <button class="invite__button">Try it free</button>
             </div>
         </div>
 
@@ -409,7 +489,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </main>
 
