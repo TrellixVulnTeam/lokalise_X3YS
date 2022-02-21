@@ -63,12 +63,15 @@
     @include positionBtns(0);
   }
 
-  @media screen and (max-width: 1040px) {
+
+  @include for1040Width{
+
     &__nav{
       margin: 90px 0 0 0;
       border-top: 1px solid #CCCCCC;
     }
     &__burger {
+      user-select: none;
       display: block;
       position: fixed;
       width: 30px;
@@ -140,33 +143,6 @@
       height: 100%;
       z-index: 1;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     &__buttons {
       justify-content: center;

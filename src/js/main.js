@@ -58,68 +58,56 @@ import "../img/footer-logo.svg"
 import "../img/StudiesPictures/studies-logo.svg"
 import "../img/StudiesPictures/studies-pic.png"
 
-    let offset = 0
-    const sliderLine = document.querySelector(".info__slider-line")
+    let offset = 0;
+    const step = 496;
+    const sliderLine = document.querySelector(".info__slider-line");
 
-    const demoId = document.querySelector('.info__language')
+    const demoId = document.querySelector('.info__language');
 
-    demoId.textContent = "php"
+    const switchLabel = (offset) => {
+        switch (offset) {
+            case step * 0:
+                demoId.textContent = "php";
+                break;
+            case step * 1:
+                demoId.textContent = "node.js";
+                break;
+            case step * 2:
+                demoId.textContent = "go";
+                break;
+            case step * 3:
+                demoId.textContent = "ruby";
+                break;
+            case step * 4:
+                demoId.textContent = "curl";
+                break;
+        }
+    };
+
+    demoId.textContent = "php";
 
     document.querySelector(".info__next").addEventListener("click", () => {
-        offset += 496
-        if (offset > 1984) {
+        offset += step;
+        if (offset > step * 3) {
             offset = 0
         }
-        sliderLine.style.left = -offset + "px"
+        sliderLine.style.left = -offset + "px";
 
-        switch (offset) {
-            case 0:
-                demoId.textContent = "php"
-                break
-            case 496:
-                demoId.textContent = "node.js"
-                break
-            case 992:
-                demoId.textContent = "go"
-                break
-            case 1488:
-                demoId.textContent = "ruby"
-                break
-            case 1984:
-                demoId.textContent = "curl"
-                break
-        }
-    })
+        switchLabel(offset)
+    });
     document.querySelector(".info__prev").addEventListener("click", () => {
-        offset -= 496
+        offset -= step;
         if (offset < 0) {
-            offset = 1984
+            offset = step * 4
         }
-        sliderLine.style.left = -offset + "px"
+        sliderLine.style.left = -offset + "px";
 
-        switch (offset) {
-            case 0:
-                demoId.textContent = "php"
-                break
-            case 496:
-                demoId.textContent = "node.js"
-                break
-            case 992:
-                demoId.textContent = "go"
-                break
-            case 1488:
-                demoId.textContent = "ruby"
-                break
-            case 1984:
-                demoId.textContent = "curl"
-                break
-        }
-    })
+        switchLabel(offset)
+    });
 
 
 $(document).ready(function() {
     $('.header__burger').click(function(event) {
         $('.header__burger,.header__content').toggleClass('active');
-
     });
 });
