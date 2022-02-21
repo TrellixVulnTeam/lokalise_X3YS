@@ -51,7 +51,9 @@
     }
   }
 
-
+  &__burger{
+    display: none;
+  }
 
   &__item:last-child {
     margin-right: 0;
@@ -62,6 +64,110 @@
   }
 
   @media screen and (max-width: 1040px) {
+    &__nav{
+      margin: 90px 0 0 0;
+      border-top: 1px solid #CCCCCC;
+    }
+    &__burger {
+      display: block;
+      position: fixed;
+      width: 30px;
+      height: 20px;
+      left: 90%;
+      z-index: 3;
+      span {
+        position: absolute;
+        background-color: black;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+      }
+      &:before{
+        content: '';
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+      }
+      &:after{
+        content: '';
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+      }
+    }
+    .active:before {
+      transform: rotate(45deg);
+      width: 30px;
+      top: 47px;
+    }
+    .header__burger:before,
+    .header__burger:after {
+
+    }
+    .header__burger:before {
+      top: 0;
+    }
+    .header__burger:after {
+      bottom: 0;
+    }
+    .header__burger.active span {
+      transform: scale(0);
+    }
+    .header__burger.active:before {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+    .header__burger.active:after {
+      transform: rotate(-45deg);
+      bottom: 9px;
+    }
+
+    .header__content.active{
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #FFFFFF;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     &__buttons {
       justify-content: center;
       margin-top: 20px;
@@ -90,55 +196,6 @@
 
     &__item:last-child {
       margin-right: 0;
-    }
-  }
-}
-
-
-#burger, [for=burger] {
-  display: none;
-}
-
-@include for1040Width {
-
-  [for=burger] {
-    display: block;
-    font-size: 30px;
-  }
-  [for=burger]::before {
-    content: '☰';
-  }
-  #burger:checked + label + .header__content {
-    display: block;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: white;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    animation: show .5s ease;
-  }
-
-  #burger:checked + .header__content {
-    display: block;
-
-  }
-
-  #burger:checked + [for=burger]::before {
-    content: '⮾';
-    position: fixed;
-    z-index: 2;
-    top: 35px;
-    right: 50px;
-  }
-
-  @keyframes show {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
     }
   }
 }
