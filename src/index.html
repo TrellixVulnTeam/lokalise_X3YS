@@ -149,36 +149,40 @@
                         <div class="info__code-container">
                             <div class="info__slider">
                                 <div class="info__slider-line">
-                                    <div class="info__item"><pre><code><span class="info__blue"
-                                            >$client</span> <span class="info__green"
-                                            >=</span> <span
-                                            style="color: #000000;">new</span> \Lokalise\LokaliseApiClient<span
-                                            class="info__green">(</span><span
-                                            class="info__blue">$token</span><span
-                                            class="info__green">)</span><span
-                                            class="info__green">;</span>&nbsp;
-
-
-<span class="info__blue">$response</span> <span class="info__green">=</span> <span class="info__blue">$client</span><span
-                                                class="info__green">-&gt;</span><span
-                                                style="color: #004000;">files</span><span
-                                                class="info__green">-&gt;</span><span
-                                                style="color: #004000;">download</span><span
-                                                class="info__green">(</span>
-    <span class="info__blue">$projectId</span><span class="info__green">,</span>
-    <span class="info__green">[
-    </span>
-        <span class="info__lightblue">'format'</span> <span class="info__green">=&gt;</span> <span
-                                                class="info__lightblue">'json'</span><span
-                                                class="info__green">,</span><span class="info__green">
-
-    ]</span>
-
-<span class="info__green">)</span><span class="info__green">;</span></code></pre>
+                                    <div class="info__item">
+                                        <div class="info__code"><code>
+                                            <span class="info__blue">$client</span>
+                                            <span class="info__green">=</span>
+                                            <span style="color: #000000;">new</span>
+                                            <span>\Lokalise\LokaliseApiClient</span><span class="info__green">(</span><span class="info__blue">$token</span><span class="info__green">)</span><span class="info__green">;</span>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <span class="info__blue">$response</span>
+                                            <span class="info__green">=</span>
+                                            <span class="info__blue">$client</span><span class="info__green">-&gt;</span><span style="color: #004000;">files</span><span class="info__green">-&gt;</span><span style="color: #004000;">download</span><span class="info__green">(</span>
+                                            <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="info__blue">$projectId</span><span class="info__green">,</span>
+                                            <br>
+                                            <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="info__green">[</span>
+                                            <br>
+                                            <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="info__lightblue">'format'</span>
+                                            <span class="info__green">=&gt;</span>
+                                            <span class="info__lightblue">'json'</span><span class="info__green">,</span>
+                                            <br>
+                                            <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="info__green">]</span>
+                                            <br>
+                                            <br>
+                                            <span class="info__green">)</span><span class="info__green">;</span>
+                                        </code></div>
                                     </div>
-                                    <div class="info__item"><pre><code><span class="info__blue">const</span> lokalise <span
+                                    <div class="info__item"><pre><code><span
+                                            class="info__blue">const</span> lokalise <span
                                             class="info__green">=</span> <span class="info__blue"
-                                            style="font-weight: bold;">new</span> LokaliseApi<span
+                                                                               style="font-weight: bold;">new</span> LokaliseApi<span
                                             class="info__green">(</span><span class="info__green">{</span>apiKey<span
                                             class="info__green">:</span> token<span class="info__green">}</span><span
                                             class="info__green">)</span><span class="info__green">;</span>
@@ -199,7 +203,8 @@ lokalise.<span class="info__purple">files</span>.<span class="info__purple">down
                                     </div>
                                     <div class="info__item">
                                         <pre><code>client<span class="info__blue">,</span> err <span
-                                                class="info__blue">:</span><span class="info__blue">=</span> lokalise<span
+                                                class="info__blue">:</span><span
+                                                class="info__blue">=</span> lokalise<span
                                                 class="info__blue">.</span><span class="info__blue">New</span><span
                                                 class="info__green">(</span>token<span
                                                 class="info__green">)</span>
@@ -218,13 +223,14 @@ client<span class="info__blue">.</span><span class="info__dark-green">List</span
                                         </code></pre>
                                     </div>
                                     <div class="info__item">
-                                        <pre><code><span class="info__lightblue" style="font-weight:bold;">@client</span> = Lokalise.<span
+                                        <pre><code><span class="info__lightblue"
+                                                         style="font-weight:bold;">@client</span> = Lokalise.<span
                                                 class="info__purple">client</span> token
 &nbsp;
 
 translations = <span class="info__lightblue" style="font-weight:bold;">@client</span>.<span
                                                     class="info__pink">translations</span><span class="info__dark-green"
-                                                    style="font-weight:bold;">(</span>
+                                                                                                style="font-weight:bold;">(</span>
   project_id,
   limit: <span class="info__pale-green">4</span>,
   page: <span class="info__pale-green">2</span>,
