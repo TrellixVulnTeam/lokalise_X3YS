@@ -101,8 +101,9 @@ import "../img/StudiesPictures/studies-pic.png"
     });
 
 
-$(document).ready(function() {
-    $('.header__burger').click(function(event) {
-        $('.header__burger,.header__content').toggleClass('active');
-    });
-});
+let menuBtn = document.querySelector('.header__burger');
+let menu = document.querySelector('.header__content');
+menuBtn.addEventListener('click', function(){
+    menu.classList.toggle('active');
+    menuBtn.classList.toggle("active")
+})

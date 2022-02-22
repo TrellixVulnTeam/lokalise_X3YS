@@ -8,6 +8,12 @@
 
     border-bottom: 1px solid #CCCCCC;
     margin-bottom: 129px;
+    @include for1040Width {
+      position: fixed;
+      z-index: 1;
+      width: 100%;
+      background: #FFFFFF;
+    }
   }
 
   &__logo {
@@ -32,45 +38,52 @@
   &__content {
     @include positionBlock();
     width: 100%;
+    @include for1040Width {
+      display: none;
+    }
   }
 
   &__list {
     margin: 0;
     padding: 0;
     list-style: none;
+    @include for1040Width {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
   }
 
   &__item {
     display: inline-block;
     margin-right: 52px;
-
     @include fontz(15px, 15px);
-
-    &:hover{
+    &:hover {
       cursor: pointer;
     }
-  }
+    @include for1040Width {
+      display: block;
+      margin-right: 0;
+      border-bottom: 1px solid #CCCCCC;
+      width: 100%;
+      padding: 30px;
+      font-size: 32px;
 
-  &__burger{
-    display: none;
-  }
-
-  &__item:last-child {
-    margin-right: 0;
-  }
-
-  &__buttons {
-    @include positionBtns(0);
-  }
-
-
-  @include for1040Width{
-
-    &__nav{
-      margin: 90px 0 0 0;
-      border-top: 1px solid #CCCCCC;
+      &:hover {
+        background: #FF6336;
+      }
     }
-    &__burger {
+  }
+
+  &__burger {
+    display: none;
+    &:before{
+      top: 0;
+    }
+    &:after {
+      bottom: 0;
+    }
+    @include for1040Width {
       user-select: none;
       display: block;
       position: fixed;
@@ -87,7 +100,7 @@
         top: 9px;
         transition: all 0.3s ease 0s;
       }
-      &:before{
+      &:before {
         content: '';
         background-color: black;
         position: absolute;
@@ -96,7 +109,7 @@
         left: 0;
         transition: all 0.3s ease 0s;
       }
-      &:after{
+      &:after {
         content: '';
         background-color: black;
         position: absolute;
@@ -106,75 +119,63 @@
         transition: all 0.3s ease 0s;
       }
     }
-    .active:before {
-      transform: rotate(45deg);
-      width: 30px;
-      top: 47px;
-    }
-    .header__burger:before,
-    .header__burger:after {
+  }
 
-    }
-    .header__burger:before {
-      top: 0;
-    }
-    .header__burger:after {
-      bottom: 0;
-    }
-    .header__burger.active span {
-      transform: scale(0);
-    }
-    .header__burger.active:before {
-      transform: rotate(45deg);
-      top: 9px;
-    }
-    .header__burger.active:after {
-      transform: rotate(-45deg);
-      bottom: 9px;
-    }
+  &__item:last-child {
+    margin-right: 0;
 
-    .header__content.active{
-      display: block;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background: #FFFFFF;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
+  }
 
-    &__buttons {
+  &__buttons {
+    @include positionBtns(0);
+  }
+
+
+  &__nav {
+    @include for1040Width {
+      margin: 90px 0 0 0;
+      border-top: 1px solid #CCCCCC;
+    }
+  }
+
+  &__buttons {
+    @include for1040Width {
       justify-content: center;
       margin-top: 20px;
     }
+  }
 
-    &__content {
-      display: none;
-    }
-    &__list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    &__item {
-      display: block;
-      margin-right: 0;
-      border-bottom: 1px solid #CCCCCC;
-      width: 100%;
-      padding: 30px;
-      font-size: 32px;
-      &:hover{
-        background: #FF6336;
-      }
-    }
-
-    &__item:last-child {
-      margin-right: 0;
-    }
+  &__item:last-child {
+    margin-right: 0;
   }
 }
 
+.active:before {
+  transform: rotate(45deg);
+  width: 30px;
+  top: 47px;
+}
+.active span {
+  transform: scale(0);
+}
 
+.header__burger.active:before {
+  transform: rotate(45deg);
+  top: 9px;
+}
 
+.header__burger.active:after {
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+
+.header__content.active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
