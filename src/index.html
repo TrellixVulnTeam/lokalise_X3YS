@@ -154,103 +154,154 @@
                                             <span class="info__blue">$client</span>
                                             <span class="info__green">=</span>
                                             <span style="color: #000000;">new</span>
-                                            <span>\Lokalise\LokaliseApiClient</span><span class="info__green">(</span><span class="info__blue">$token</span><span class="info__green">)</span><span class="info__green">;</span>
+                                            <span>\Lokalise\LokaliseApiClient</span><span
+                                                class="info__green">(</span><span class="info__blue">$token</span><span
+                                                class="info__green">)</span><span class="info__green">;</span>
                                             <br>
                                             <br>
                                             <br>
                                             <span class="info__blue">$response</span>
                                             <span class="info__green">=</span>
-                                            <span class="info__blue">$client</span><span class="info__green">-&gt;</span><span style="color: #004000;">files</span><span class="info__green">-&gt;</span><span style="color: #004000;">download</span><span class="info__green">(</span>
+                                            <span class="info__blue">$client</span><span
+                                                class="info__green">-&gt;</span><span
+                                                style="color: #004000;">files</span><span
+                                                class="info__green">-&gt;</span><span
+                                                style="color: #004000;">download</span><span
+                                                class="info__green">(</span>
                                             <br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="info__blue">$projectId</span><span class="info__green">,</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="info__blue">$projectId</span><span
+                                                class="info__green">,</span>
                                             <br>
                                             <br>
                                             &nbsp;&nbsp;&nbsp;&nbsp;<span class="info__green">[</span>
                                             <br>
                                             <br>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="info__lightblue">'format'</span>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                class="info__lightblue">'format'</span>
                                             <span class="info__green">=&gt;</span>
-                                            <span class="info__lightblue">'json'</span><span class="info__green">,</span>
+                                            <span class="info__lightblue">'json'</span><span
+                                                class="info__green">,</span>
                                             <br>
                                             <br>
                                             &nbsp;&nbsp;&nbsp;&nbsp;<span class="info__green">]</span>
                                             <br>
-                                            <br>
                                             <span class="info__green">)</span><span class="info__green">;</span>
                                         </code></div>
                                     </div>
-                                    <div class="info__item"><pre><code><span
-                                            class="info__blue">const</span> lokalise <span
-                                            class="info__green">=</span> <span class="info__blue"
-                                                                               style="font-weight: bold;">new</span> LokaliseApi<span
-                                            class="info__green">(</span><span class="info__green">{</span>apiKey<span
-                                            class="info__green">:</span> token<span class="info__green">}</span><span
-                                            class="info__green">)</span><span class="info__green">;</span>
-&nbsp;
-
-lokalise.<span class="info__purple">files</span>.<span class="info__purple">download</span><span
-                                                class="info__green">(</span>
-
-    project_id<span class="info__green">,</span> <span class="info__green">{
-                                        </span>
-        format<span class="info__green">:</span> <span class="info__blue">"json"</span><span
-                                                class="info__green">,
-                                        </span>
-        original_filenames<span class="info__green">:</span> <span class="info__blue">true</span>
-    <span class="info__green">}
-    </span>
-<span class="info__green">)</span><span class="info__green">;</span></code></pre>
+                                    <div class="info__item">
+                                        <div class="info__code">
+                                            <code>
+                                                <span class="info__blue">const</span> lokalise
+                                                <span class="info__green">=</span>
+                                                <span class="info__blue" style="font-weight: bold;">new</span>
+                                                LokaliseApi<span class="info__green">(</span><span
+                                                    class="info__green">{</span>apiKey<span class="info__green">:</span>
+                                                token<span class="info__green">}</span><span
+                                                    class="info__green">)</span><span class="info__green">;</span>
+                                                <br>
+                                                <br>
+                                                lokalise.<span class="info__purple">files</span>.<span
+                                                    class="info__purple">download</span><span
+                                                    class="info__green">(</span>
+                                                <br>
+                                                <br>
+                                                &nbsp;&nbsp;project_id<span class="info__green">,</span>
+                                                <span class="info__green">{</span>
+                                                <br>
+                                                <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;format<span
+                                                    class="info__green">:</span>
+                                                <span class="info__blue">"json"</span><span class="info__green">,</span>
+                                                <br>
+                                                <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;original_filenames<span
+                                                    class="info__green">:</span>
+                                                <span class="info__blue">true</span>
+                                                <br>
+                                                <br>
+                                                &nbsp;&nbsp;<span class="info__green">}</span>
+                                                <br>
+                                                <span class="info__green">)</span><span class="info__green">;</span>
+                                            </code>
+                                        </div>
                                     </div>
                                     <div class="info__item">
-                                        <pre><code>client<span class="info__blue">,</span> err <span
-                                                class="info__blue">:</span><span
-                                                class="info__blue">=</span> lokalise<span
-                                                class="info__blue">.</span><span class="info__blue">New</span><span
-                                                class="info__green">(</span>token<span
-                                                class="info__green">)</span>
-&nbsp;
-client <span class="info__blue">:</span><span class="info__blue">=</span> Api<span
-                                                    class="info__blue">.</span><span class="info__dark-green">Contributors</span><span
-                                                    class="info__green">(</span><span
+                                        <div class="info__code">
+                                            <code>
+                                                client<span class="info__blue">,</span>
+                                                err
+                                                <span class="info__blue">:</span><span class="info__blue">=</span>
+                                                lokalise<span class="info__blue">.</span><span
+                                                    class="info__blue">New</span><span class="info__green">(</span>token<span
                                                     class="info__green">)</span>
-client<span class="info__blue">.</span><span class="info__dark-green">SetPageOptions</span><span
+                                                <br>
+                                                <br>
+                                                <br>
+                                                client
+                                                <span class="info__blue">:</span><span class="info__blue">=</span>
+                                                Api<span class="info__blue">.</span><span class="info__dark-green">Contributors</span><span
+                                                    class="info__green">(</span><span class="info__green">)</span>
+                                                <br>
+                                                client<span class="info__blue">.</span><span class="info__dark-green">SetPageOptions</span><span
                                                     class="info__green">(</span>pageOpts<span
                                                     class="info__green">)</span>
-client<span class="info__blue">.</span><span class="info__dark-green">List</span><span
+                                                <br>
+                                                client<span class="info__blue">.</span><span class="info__dark-green">List</span><span
                                                     class="info__green">(</span>projectId<span
                                                     class="info__green">)</span>
-
-                                        </code></pre>
+                                            </code>
+                                        </div>
                                     </div>
                                     <div class="info__item">
-                                        <pre><code><span class="info__lightblue"
-                                                         style="font-weight:bold;">@client</span> = Lokalise.<span
-                                                class="info__purple">client</span> token
-&nbsp;
-
-translations = <span class="info__lightblue" style="font-weight:bold;">@client</span>.<span
-                                                    class="info__pink">translations</span><span class="info__dark-green"
-                                                                                                style="font-weight:bold;">(</span>
-  project_id,
-  limit: <span class="info__pale-green">4</span>,
-  page: <span class="info__pale-green">2</span>,
-  disable_references: <span class="info__pale-green">0</span>
-<span class="info__dark-green" style="font-weight:bold;">)</span></code></pre>
+                                        <div class="info__code">
+                                            <code>
+                                                <span class="info__lightblue" style="font-weight:bold;">@client</span>
+                                                =
+                                                Lokalise.<span class="info__purple">client</span>
+                                                token
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                translations
+                                                =
+                                                <span class="info__lightblue"
+                                                      style="font-weight:bold;">@client</span>.<span class="info__pink">translations</span><span
+                                                    class="info__dark-green" style="font-weight:bold;">(</span>
+                                                <br>
+                                                <br>
+                                                &nbsp;&nbsp;&nbsp;project_id, limit:
+                                                <span class="info__pale-green">4</span>,
+                                                <br>
+                                                <br>
+                                                &nbsp;&nbsp;&nbsp;page:
+                                                <span class="info__pale-green">2</span>,
+                                                <br>
+                                                <br>
+                                                &nbsp;&nbsp;&nbsp;disable_references:
+                                                <span class="info__pale-green">0</span>
+                                                <br>
+                                                <span class="info__dark-green" style="font-weight:bold;">)</span>
+                                            </code>
+                                        </div>
                                     </div>
                                     <div class="info__item">
-                                        <pre><code>
-  curl
-  <span class="info__pale-purple">--request</span> POST \
-  <span class="info__dark-green">--url</span> https:<span style="color: #000000; font-weight: bold;">//</span>api.lokalise.com<span
+                                        <div class="info__code"><code>
+                                            curl
+                                            <span class="info__pale-purple">--request</span> POST \
+                                            <span class="info__dark-green">--url</span> https:<span
+                                                style="color: #000000; font-weight: bold;">//</span>api.lokalise.com<span
                                                 style="color: #000000; font-weight: bold;">/</span>api2<span
                                                 style="color: #000000; font-weight: bold;">/</span>projects<span
                                                 style="color: #000000; font-weight: bold;">/</span><span
                                                 class="info__dark-green">${PROJECT_ID}</span><span
                                                 style="color: #000000; font-weight: bold;">/</span>branches \
-  <span class="info__dark-green">--header</span> <span class="info__orange">'content-type: application/json'</span> \
-  <span class="info__dark-green">--header</span> <span class="info__orange">'x-api-token: ${TOKEN}'</span> \
-  <span class="info__dark-green">--data</span> <span class="info__orange">'{"name":"hotfix/really-important"}'</span>
-                                        </code></pre>
+                                            <span class="info__dark-green">--header</span> <span class="info__orange">'content-type: application/json'</span>
+                                            \
+                                            <span class="info__dark-green">--header</span> <span class="info__orange">'x-api-token: ${TOKEN}'</span>
+                                            \
+                                            <span class="info__dark-green">--data</span> <span class="info__orange">'{"name":"hotfix/really-important"}'</span>
+                                        </code></div>
                                     </div>
                                 </div>
                             </div>
@@ -263,8 +314,6 @@ translations = <span class="info__lightblue" style="font-weight:bold;">@client</
 
             </div>
         </div>
-
-
         <div class="lokalise">
             <h1 class="lokalise__main-title">What can you localize with Lokalise?</h1>
             <ul class="lokalise__wrapper">
@@ -418,7 +467,7 @@ translations = <span class="info__lightblue" style="font-weight:bold;">@client</
 
         <div class="invite">
             <div class="invite__wrapper">
-                <h1 class="invitee__title">Localization made easy. Why wait?</h1>
+                <h1 class="invite__title">Localization made easy. Why wait?</h1>
                 <p class="invite__subtitle">Try for free or let us show you how it works.</p>
                 <button class="invite__button">Try it free</button>
             </div>

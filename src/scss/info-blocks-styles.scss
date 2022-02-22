@@ -1,186 +1,167 @@
 @import "mixins";
 
-.info__wrapper{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 250px;
-}
-
-.info__pic{
-  max-width: 632px;
-  width: 100%;
-}
-
-.info__title{
-  @include fontz(50px, 60px);
-  font-weight: 600;
-
-  margin-top: 150px;
-  margin-bottom: 30px;
-  max-width: 493px;
-}
-
-.info__ref{
-  font-weight: 600;
-  @include fontz(20px, 30px);
-}
-
-.info__subtitle{
-  @include fontz(20px, 30px);
-  margin-bottom: 30px;
-  max-width: 491px;
-
-  .info__ref{
-    font-weight: normal;
-    text-decoration: underline;
+.info {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 250px;
   }
-}
 
-.info__wrapper:nth-child(2n){
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  column-gap: 138px;
-}
-
-.info__code-sample{
-  min-width: 632px;
-  min-height: 577px;
-  padding: 0 25px;
-  background: #FFF8E4;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-}
-
-.info__code-container{
-  position: relative;
-  width: 100%;
-  height: 340px;
-  max-width: 500px;
-}
-
-@include for1040Width() {
-  .info__code-sample{
-    width: 100%;
+  &__pic {
     max-width: 632px;
-    min-width: 0;
-    padding: 0;
+    width: 100%;
   }
-  .info__wrapper:nth-child(1n){
+
+  &__title {
+    @include fontz(50px, 60px);
+    font-weight: 600;
+
+    margin-top: 150px;
+    margin-bottom: 30px;
+    max-width: 493px;
+  }
+
+  &__ref {
+    font-weight: 600;
+    @include fontz(20px, 30px);
+  }
+
+  &__subtitle {
+    @include fontz(20px, 30px);
+    margin-bottom: 30px;
+    max-width: 491px;
+
+    .info__ref {
+      font-weight: normal;
+      text-decoration: underline;
+    }
+  }
+
+  &__wrapper:nth-child(2n) {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    column-gap: 138px;
+  }
+
+  &__code-sample {
+    min-width: 632px;
+    min-height: 577px;
+    padding: 0 25px;
+    background: #FFF8E4;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    flex-direction: column-reverse;
+    justify-content: center;
+    font-size: 14px;
   }
-}
 
-
-
-.info__slider {
-  min-width: 485px;
-  height: 300px;
-  overflow: hidden;
-  background: #FFFFFF;
-}
-
-.info__slider-line {
-  display: flex;
-  position: relative;
-  height: 300px;
-  width: 2425px;
-
-  left: 0;
-  transition: all ease 1s;
-}
-
-.info__item{
-  min-width: 436px;
-  min-height: 239px;
-  padding: 30px;
-  code{
-    font-family: monospace;
-    color: #9876AA;
+  &__code-container {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    max-width: 500px;
   }
-  .info__code{
+
+  @include for1040Width() {
+    &__code-sample {
+      width: 100%;
+      max-width: 632px;
+      min-width: 0;
+      padding: 0;
+    }
+    &__wrapper:nth-child(1n) {
+      align-items: center;
+      flex-direction: column-reverse;
+    }
+  }
+
+
+  &__slider {
+    min-width: 485px;
+    height: 300px;
+    overflow: hidden;
+    background: #FFFFFF;
+  }
+
+  &__slider-line {
+    display: flex;
+    position: relative;
+    height: 300px;
+    width: 2425px;
+
+    left: 0;
+    transition: all ease 1s;
+  }
+
+  &__item {
+    min-width: 436px;
+    min-height: 239px;
+    padding: 30px;
+
+    code {
+      font-family: monospace;
+      color: #9876AA;
+    }
+  }
+
+  &__code {
     overflow: auto;
     height: 270px;
   }
-  .info__blue{
+
+  &__blue {
     color: #000088;
   }
 
-  .info__green{
+  &__green {
     color: #339933;
   }
-  .info__lightblue{
+
+  &__lightblue {
     color: #0000ff;
   }
-  .info__purple{
+
+  &__purple {
     color: #660066;
   }
-  .info__dark-green{
+
+  &__dark-green {
     color: #006600;
   }
-  .info__pale-purple{
+
+  &__pale-purple {
     color: #660033;
   }
-  .info__pale-green{
-    color:#006666;
+
+  &__pale-green {
+    color: #006666;
   }
-  .info__pink{
-    color:#9900CC;
+
+  &__pink {
+    color: #9900CC;
   }
-  .info__orange{
+
+  &__orange {
     color: #ff0000;
   }
-}
+
+  &__prev, &__next {
+    @include btnReset();
+    background: none;
+    height: 0;
+    text-decoration: underline;
+
+    &:hover {
+      zoom: 1.1;
+    }
+  }
 
 
-.info__prev,.info__next{
-  @include btnReset();
-  background: none;
-  height: 0;
-  text-decoration: underline;
-  &:hover{
-    zoom: 1.1;
+  &__language {
+    display: inline-block;
+    min-width: 49px;
+    min-height: 30px;
+    margin: 0 5px 0 5px;
+    text-align: center;
   }
 }
-
-
-.info__language{
-  display: inline-block;
-  min-width: 49px;
-  min-height: 30px;
-  margin: 0 5px 0 5px;
-  text-align: center;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

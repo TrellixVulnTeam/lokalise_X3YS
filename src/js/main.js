@@ -13,11 +13,6 @@ import "../scss/studies-stuels.scss"
 import "../scss/footer-styles.scss"
 import "../scss/mixins.scss"
 
-import 'owl.carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-
-
-
 import "../img/HeaderPictures/logo.svg"
 
 import "../img/IntroPictures/intro-picture.svg"
@@ -88,7 +83,7 @@ import "../img/StudiesPictures/studies-pic.png"
 
     document.querySelector(".info__next").addEventListener("click", () => {
         offset += step;
-        if (offset > step * 3) {
+        if (offset > step * 4) {
             offset = 0
         }
         sliderLine.style.left = -offset + "px";
