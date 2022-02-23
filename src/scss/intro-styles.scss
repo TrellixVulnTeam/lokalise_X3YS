@@ -1,7 +1,7 @@
 @import "mixins";
 
-.intro{
-  &__button{
+.intro {
+  &__button {
     @include btnReset();
     width: 160px;
     height: 60px;
@@ -10,57 +10,58 @@
     color: #FFFFFF;
   }
 
-  &__button:last-child{
+  &__button:last-child {
     background: #FFFFFF;
 
     border: 1px solid black;
     color: black;
   }
 
-  &__title{
+  &__title {
     margin-bottom: 51px;
 
     font-weight: 600;
-
     @include fontz(65px, 70px);
   }
 
-  &__wrapper{
+  &__wrapper {
     display: flex;
     position: relative;
     flex-direction: row;
     flex-wrap: nowrap;
     height: 100%;
     margin-bottom: 137px;
+    @include for1040Width {
+      flex-direction: column;
+      padding: 0 25px;
+    }
   }
 
-  &__subtitle{
+  &__subtitle {
     @include fontz(25px, 35px);
 
     margin-right: 68px;
     margin-bottom: 50px;
   }
-}
 
-.intro__pic{
-  max-width: 759px;
-  width: 54%;
-  height: 529px;
-}
-
-.intro__buttons{
-  @include positionBtns(25px);
-}
-
-@include for1040Width {
-  .intro__wrapper{
-    flex-direction: column;
-    padding: 0 25px;
+  &__pic {
+    max-width: 759px;
+    width: 54%;
+    height: 529px;
+    @include for1040Width {
+      width: 100%;
+    }
   }
-  .intro__pic{
-    width: 100%;
+
+  &__buttons {
+    @include positionBtns(25px);
   }
-  .intro__buttons{
-    justify-content: flex-start;
+  &__content {
+    padding-left: 10px;
+    @include for1040Width {
+      margin-top: 90px;
+    }
   }
 }
+
+

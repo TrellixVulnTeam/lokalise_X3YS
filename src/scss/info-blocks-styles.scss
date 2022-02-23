@@ -5,6 +5,9 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 250px;
+    @include for1040Width() {
+    margin-bottom: 125px;
+    }
   }
 
   &__pic {
@@ -74,7 +77,6 @@
       flex-direction: column-reverse;
     }
   }
-
 
   &__slider {
     min-width: 485px;
@@ -155,7 +157,6 @@
       zoom: 1.1;
     }
   }
-
 
   &__language {
     display: inline-block;
